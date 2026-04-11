@@ -1,0 +1,288 @@
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f8f9fa;
+            -webkit-font-smoothing: antialiased;
+            background-image: url('/assets/img/media/images/img1.jpg');
+
+        }
+
+        .login-card {
+            width: 480px;
+            height: 480px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3rem 3.5rem;
+            padding-bottom: 4rem;
+            overflow: hidden;
+        }
+
+        .logo-wrap {
+            text-align: center;
+        }
+
+        .logo-wrap img {
+            padding-top: 3rem;
+            max-width: 150px;
+            height: auto;
+            display: inline-block;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            text-align: center;
+            margin-bottom: 0.2rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 0.82rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 0.6rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            color: #0b0b0b;
+            background: #fff;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212,175,55,0.08);
+        }
+
+        .row-between {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .forgot { color: #000; text-decoration: underline; }
+
+        .btn-signin {
+            width: 100%;
+            padding: 0.6rem;
+            background: #352b1e;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            margin-bottom: 0.75rem;
+        }
+
+        .divider {
+            position: relative;
+            text-align: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .divider hr {
+            border: 0;
+            border-top: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .divider span {
+            position: absolute;
+            top: -9px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            padding: 0 10px;
+            color: #888;
+            font-size: 0.75rem;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .btn-social {
+            padding: 0.5rem;
+            background: #fff;
+            color: #000;
+            border: 2px solid #352b1e;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+        }
+
+        .signup-note {
+            text-align: center;
+            font-size: 0.82rem;
+            color: #444;
+            padding-bottom: 1rem;
+        }
+
+        .signup-note a {
+            color: #000;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+
+
+/* Smooth global transitions */
+* {
+    transition: all 0.2s ease;
+}
+
+
+.login-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* INPUT INTERACTIONS */
+input[type="email"],
+input[type="password"] {
+    transition: all 0.25s ease;
+}
+
+input[type="email"]:hover,
+input[type="password"]:hover {
+    border-color: rgba(212,175,55,0.5);
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    transform: scale(1.01);
+}
+
+/* SIGN IN BUTTON ANIMATION */
+.btn-signin {
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-signin:hover {
+    background: #4a3b28;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+.btn-signin:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Shine effect */
+.btn-signin::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: rgba(255,255,255,0.15);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+}
+
+.btn-signin:hover::after {
+    left: 120%;
+}
+
+/* SOCIAL BUTTONS */
+.btn-social {
+    transition: all 0.25s ease;
+}
+
+.btn-social:hover {
+    background: #352b1e;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.btn-social:active {
+    transform: scale(0.98);
+}
+
+/* LINKS HOVER EFFECTS */
+.forgot,
+.signup-note a {
+    transition: all 0.2s ease;
+}
+
+.forgot:hover,
+.signup-note a:hover {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+/* LOGO ANIMATION */
+.logo-wrap img {
+    transition: transform 0.4s ease;
+}
+
+.logo-wrap img:hover {
+    transform: scale(1.05) rotate(-1deg);
+}
+
+/* BACKGROUND DEPTH LAYER (OPTIONAL) */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: -1;
+}
