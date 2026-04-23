@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Lumina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/signup.css">
+</head>
+<body>
+
+    <div class="signup-card">
+
+        <div class="logo-wrap">
+            <img src="/assets/img/logos/prior-logo-brown.png" alt="Prior Logo">
+        </div>
+
+        <h2>Create Account</h2>
+        <p class="subtitle">Join us for exclusive access</p>
+
+        <form action="index.html">
+
+            <div class="name-grid">
+                <div class="form-group">
+                    <fieldset>
+                        <legend>First Name</legend>
+                        <input type="text" required placeholder="John">
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Last Name</legend>
+                        <input type="text" required placeholder="Doe">
+                    </fieldset>
+                </div>
+            </div>
+                <br>
+            <div class="form-group">
+                <fieldset>
+                    <legend>Email Address</legend>
+                        <input type="email" required placeholder="name@example.com">
+                        <span class="error-msg">Please enter a valid email address.</span>
+                </fieldset>
+            </div>
+                <br>
+            <div class="form-group">
+                <fieldset>
+                        <legend>Password</legend>
+                        <input type="password" required minlength="8" placeholder="Min. 8 characters">
+                        <span class="error-msg">Password must be at least 8 characters.</span>
+                </fieldset>
+            </div>
+                <br>
+            <div class="form-group">
+                <label class="terms-label">
+                    <input type="checkbox" required> I agree to the <a href="terms.html">Terms and Conditions</a>
+                </label>
+            </div>
+                <br>
+            <button type="submit" class="btn-create">Create Account</button>
+        </form>
+
+        <p class="signin-note">
+            Already have an account? <a href="login.html">Sign in</a>
+        </p>
+
+    </div>
+
+</body>
+</html>
